@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stetic-interface>
+  <configuration>
+    <images-root-path>..</images-root-path>
+  </configuration>
+  <import>
+    <widget-library name="../bin/Debug/GemuBoi.net.exe" internal="true" />
+  </import>
+  <widget class="Gtk.Window" id="MainWindow" design-size="401 300">
+    <action-group name="Default">
+      <action id="OpenAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Open..</property>
+        <property name="ShortLabel" translatable="yes">Open..</property>
+      </action>
+      <action id="LoadRomAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Load Rom</property>
+        <property name="ShortLabel" translatable="yes">Load Rom</property>
+      </action>
+      <action id="ResetAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Reset</property>
+        <property name="ShortLabel" translatable="yes">Reset</property>
+      </action>
+      <action id="FileAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">File</property>
+        <property name="ShortLabel" translatable="yes">Open Rom</property>
+      </action>
+      <action id="ResetAction3">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Reset</property>
+        <property name="ShortLabel" translatable="yes">Reset</property>
+      </action>
+      <action id="OpenAction1">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Open</property>
+        <property name="ShortLabel" translatable="yes">Open</property>
+      </action>
+      <action id="EmulationAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Emulation</property>
+        <property name="ShortLabel" translatable="yes">Emulation</property>
+      </action>
+      <action id="ResetAction2">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Reset</property>
+        <property name="ShortLabel" translatable="yes">Reset</property>
+      </action>
+    </action-group>
+    <property name="MemberName" />
+    <property name="Title" translatable="yes">MainWindow</property>
+    <property name="WindowPosition">CenterOnParent</property>
+    <signal name="DeleteEvent" handler="OnDeleteEvent" />
+    <child>
+      <widget class="Gtk.VBox" id="vbox3">
+        <property name="MemberName" />
+        <property name="Spacing">6</property>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <widget class="Gtk.DrawingArea" id="drawingarea">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="Position">1</property>
+            <property name="AutoSize">True</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</stetic-interface>
