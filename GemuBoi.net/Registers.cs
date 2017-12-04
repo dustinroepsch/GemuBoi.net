@@ -1,5 +1,9 @@
 ﻿using System;
 
+//reg.a = 0x14
+//reg.f = 0xc4
+//print reg.af -> 0x14c4
+
 namespace GemuBoi.net
 {
     public class Registers
@@ -49,6 +53,40 @@ namespace GemuBoi.net
             {
                 h = LeastSigByte(value);
                 l = MostSigByte(value);
+            }
+        }
+
+        public void setZ(bool v)
+        {
+            if (v) {
+                f |= 0b1000_0000;
+            } else {
+                f &= 0b0111_1111;
+            }
+        }
+
+        public void setH(bool v) {
+            if (v) {
+                f |= 0b0010_0000;
+            } else {
+                f &= 0b1101_1111;
+            }
+        }
+
+        public void setN(bool v) {
+            if (v) {
+                f |= 0b0100_0000;
+            } else {
+                f &= 0b1011_1111;
+            }
+        }
+
+
+        public void setC(bool v) {
+            if (v) {
+                f |= 0b0001_0000;
+            } else {
+                f &= 0b1110_1111;
             }
         }
 
