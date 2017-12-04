@@ -91,11 +91,11 @@ namespace GemuBoi.net
         }
 
         //gameboy is little endian
-        private byte LeastSigByte(ushort value) => (byte)(0xFF & (value >> 8));
+        public static byte LeastSigByte(ushort value) => (byte)(0xFF & (value >> 8));
 
-        private byte MostSigByte(ushort value) => (byte)(0xFF & value);
+        public static byte MostSigByte(ushort value) => (byte)(0xFF & value);
 
-        private ushort Makeushort(byte lsb, byte msb) => (ushort)((lsb << 8) ^ msb);
+        public static ushort Makeushort(byte lsb, byte msb) => (ushort)((lsb << 8) ^ msb);
         
 
         public Registers()
